@@ -36,9 +36,10 @@ function findMaxMin(numbers) {
       min = numbers[i];
     }
   }
-  return "Max: ${max}, Min: ${min}";
+  return `Max: ${max}, Min: ${min}`;
 }
 findMaxMin(numbers);
+console.log(findMaxMin(numbers));
 
 // Sum of Array
 function sumAll(arr) {
@@ -57,15 +58,17 @@ console.log(filtered);
 
 // Mathematical Functions:
 // Factorial
-var number = 5;
-var factorial = 1;
-var i = 1;
+function findFactorial(number) {
+  var factorial = 1;
+  var i = 1;
 
-while (i <= number) {
-  factorial = factorial * i;
-  i++;
+  while (i <= number) {
+    factorial = factorial * i;
+    i++;
+  }
+  return factorial;
 }
-console.log(factorial);
+console.log(findFactorial(5));
 
 // Prime Number Check
 function isPrime(num) {
@@ -77,24 +80,9 @@ function isPrime(num) {
   }
   return true;
 }
-isPrime(3);
+console.log(isPrime(25));
 
 // Fibonacci Sequence
-// function fibonacci(Number) {
-//   let n1 = 0;
-//   let n2 = 1;
-//   let next;
-//   next = n1 + n2;
-//   const sequence = [];
-//   while (next <= Number) {
-//     sequence.push(next);
-//     n1 = n2;
-//     n2 = next;
-//     next = n1 + n2;
-//   }
-//   return sequence;
-// }
-// fibonacci(30);
 
 function fibonacci(num) {
   let n1 = 0;
@@ -109,4 +97,4 @@ function fibonacci(num) {
   }
   return sequence;
 }
-fibonacci(10);
+console.log(fibonacci(10));
