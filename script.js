@@ -49,3 +49,64 @@ function sumAll(arr) {
 console.log(sumAll([5, 10, 15, 20]));
 
 // Filter Array
+const array = [1, -2, 3, 4, -5, 6];
+const filtered = array.filter(function (value) {
+  return value >= 0;
+});
+console.log(filtered);
+
+// Mathematical Functions:
+// Factorial
+var number = 5;
+var factorial = 1;
+var i = 1;
+
+while (i <= number) {
+  factorial = factorial * i;
+  i++;
+}
+console.log(factorial);
+
+// Prime Number Check
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+isPrime(3);
+
+// Fibonacci Sequence
+// function fibonacci(Number) {
+//   let n1 = 0;
+//   let n2 = 1;
+//   let next;
+//   next = n1 + n2;
+//   const sequence = [];
+//   while (next <= Number) {
+//     sequence.push(next);
+//     n1 = n2;
+//     n2 = next;
+//     next = n1 + n2;
+//   }
+//   return sequence;
+// }
+// fibonacci(30);
+
+function fibonacci(num) {
+  let n1 = 0;
+  let n2 = 1;
+  let next;
+  const sequence = [];
+  for (let i = 1; i <= num; i++) {
+    sequence.push(n1);
+    next = n1 + n2;
+    n1 = n2;
+    n2 = next;
+  }
+  return sequence;
+}
+fibonacci(10);
